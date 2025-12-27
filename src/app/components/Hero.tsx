@@ -1,7 +1,7 @@
 import { ArrowRight, Mail, Github, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
-import profileImage from "figma:asset/71bbcc0d56b48f13b93284548c1dd6d0592d158c.png";
+import profileImage from "../../assets/71bbcc0d56b48f13b93284548c1dd6d0592d158c.png";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -12,7 +12,10 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 relative overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 relative overflow-hidden"
+    >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -61,23 +64,28 @@ export function Hero() {
                 Desenvolvedor Full Stack
               </span>
             </motion.div>
-            
+
             <motion.h1
               className="text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Desenvolvedor <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Full Stack</span> & Estudante de ADS
+              Desenvolvedor{" "}
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Full Stack
+              </span>{" "}
+              & Estudante de ADS
             </motion.h1>
-            
+
             <motion.p
               className="text-slate-300 text-lg sm:text-xl mb-8 max-w-2xl mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Combinando uma sólida base técnica com habilidades modernas em HTML, CSS, JavaScript, React, Node.js e Supabase.
+              Combinando uma sólida base técnica com habilidades modernas em
+              HTML, CSS, JavaScript, React, Node.js e Supabase.
             </motion.p>
 
             {/* CTAs */}
@@ -158,7 +166,7 @@ export function Hero() {
                   ease: "linear",
                 }}
               />
-              
+
               {/* Decorative Rings */}
               <motion.div
                 className="absolute -inset-4 border-2 border-cyan-400/20 rounded-full"
@@ -182,13 +190,13 @@ export function Hero() {
                   ease: "linear",
                 }}
               />
-              
+
               <img
                 src={profileImage}
                 alt="Rafael Cardozo"
                 className="relative rounded-full w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover object-top border-4 border-slate-700 shadow-2xl"
               />
-              
+
               {/* Floating Badge */}
               <motion.div
                 className="absolute -bottom-4 -right-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-3 rounded-2xl shadow-xl"

@@ -1,7 +1,7 @@
 import { Folder, ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
-import dashboardImage from "figma:asset/9c9ddeec55e6ebf6d62cdbfa7a9bdccbd9bc63ce.png";
-import landingImage from "figma:asset/556246beec09bf454c133e93e622e59c7d91fafc.png";
+import dashboardImage from "../../assets/9c9ddeec55e6ebf6d62cdbfa7a9bdccbd9bc63ce.png";
+import landingImage from "../../assets/556246beec09bf454c133e93e622e59c7d91fafc.png";
 
 export function Projects() {
   const projects = [
@@ -33,7 +33,9 @@ export function Projects() {
           <div className="bg-gradient-to-r from-cyan-400 to-blue-500 p-2 rounded-lg">
             <Folder className="text-white" size={32} />
           </div>
-          <h2 className="text-3xl sm:text-4xl text-white">Projetos em Destaque</h2>
+          <h2 className="text-3xl sm:text-4xl text-white">
+            Projetos em Destaque
+          </h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -61,11 +63,18 @@ export function Projects() {
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <Folder className="text-cyan-400 flex-shrink-0" size={28} />
-                  <ExternalLink className="text-slate-400 hover:text-cyan-400 cursor-pointer transition-colors" size={20} />
+                  <ExternalLink
+                    className="text-slate-400 hover:text-cyan-400 cursor-pointer transition-colors"
+                    size={20}
+                  />
                 </div>
 
-                <h3 className="text-xl text-white mb-3 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
-                <p className="text-slate-300 mb-4 leading-relaxed text-sm">{project.description}</p>
+                <h3 className="text-xl text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-slate-300 mb-4 leading-relaxed text-sm">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, idx) => (
